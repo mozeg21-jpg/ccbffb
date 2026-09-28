@@ -1,0 +1,84 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'com.cocode.vcode.ide'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId "com.cocode.vcode.ide"
+        minSdk 24
+        targetSdk 36
+        versionCode 12
+        versionName "5.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
+
+    packaging {
+        resources {
+            excludes += ['plugin.properties', 'about.html', 'META-INF/*','META-INF/*.kotlin_module']
+        }
+    }
+}
+
+dependencies {
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.constraintlayout
+    implementation libs.activity
+    implementation libs.fragment
+    implementation libs.window
+    implementation libs.slidingpanelayout
+    
+    coreLibraryDesugaring libs.desugar.jdk.libs
+
+    // Architecture
+    implementation libs.lifecycle.viewmodel
+    implementation libs.lifecycle.livedata
+
+    // Git — the ONE essential library
+    implementation libs.org.eclipse.jgit
+    implementation libs.slf4j.api
+    implementation libs.slf4j.nop
+    implementation libs.preference
+
+    // LSP data model types (in-process, no JSON-RPC transport used)
+    implementation libs.lsp4j
+
+
+    implementation libs.security.crypto
+    implementation libs.documentfile
+
+    implementation libs.glide
+
+    testImplementation libs.junit
+    testImplementation libs.mockito.core
+    testImplementation libs.mockito.inline
+    testImplementation libs.robolectric
+    testImplementation libs.org.json
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+
+    implementation libs.jsch
+    implementation libs.org.eclipse.jgit.ssh.jsch
+}

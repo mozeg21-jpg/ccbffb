@@ -1,0 +1,57 @@
+[versions]
+activity = "1.13.0"
+agp = "9.1.0"
+lsp4j = "0.21.0"
+constraintlayout = "2.2.1"
+fragment = "1.8.9"
+glide = "5.0.7"
+jsch = "0.1.55"
+junit = "4.13.2"
+mockito = "4.11.0"
+robolectric = "4.10.3"
+junitVersion = "1.3.0"
+espressoCore = "3.7.0"
+appcompat = "1.7.1"
+lifecycleViewmodel = "2.10.0"
+material = "1.13.0"
+orgEclipseJgit = "6.7.0.202309050840-r"
+preference = "1.2.1"
+securityCrypto = "1.1.0"
+documentfile = "1.1.0"
+slf4jNop = "2.0.18"
+desugarJdkLibs = "2.1.2"
+orgJson = "20231013"
+slidingpanelayout = "1.2.0"
+window = "1.3.0"
+
+[libraries]
+activity = { module = "androidx.activity:activity", version.ref = "activity" }
+lsp4j = { module = "org.eclipse.lsp4j:org.eclipse.lsp4j", version.ref = "lsp4j" }
+constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
+fragment = { module = "androidx.fragment:fragment", version.ref = "fragment" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+jsch = { module = "com.jcraft:jsch", version.ref = "jsch" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+mockito-core = { group = "org.mockito", name = "mockito-core", version.ref = "mockito" }
+mockito-inline = { group = "org.mockito", name = "mockito-inline", version.ref = "mockito" }
+robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "robolectric" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+lifecycle-livedata = { module = "androidx.lifecycle:lifecycle-livedata", version.ref = "lifecycleViewmodel" }
+lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel", version.ref = "lifecycleViewmodel" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+org-eclipse-jgit = { module = "org.eclipse.jgit:org.eclipse.jgit", version.ref = "orgEclipseJgit" }
+org-eclipse-jgit-ssh-jsch = { module = "org.eclipse.jgit:org.eclipse.jgit.ssh.jsch", version.ref = "orgEclipseJgit" }
+preference = { group = "androidx.preference", name = "preference", version.ref = "preference" }
+security-crypto = { module = "androidx.security:security-crypto", version.ref = "securityCrypto" }
+documentfile = { group = "androidx.documentfile", name = "documentfile", version.ref = "documentfile" }
+slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4jNop" }
+slf4j-nop = { module = "org.slf4j:slf4j-nop", version.ref = "slf4jNop" }
+desugar-jdk-libs = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugarJdkLibs" }
+org-json = { group = "org.json", name = "json", version.ref = "orgJson" }
+slidingpanelayout = { module = "androidx.slidingpanelayout:slidingpanelayout", version.ref = "slidingpanelayout" }
+window = { module = "androidx.window:window", version.ref = "window" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
